@@ -8,16 +8,6 @@ const templates = {
   authorCloudLink: Handlebars.compile(document.querySelector('#template-author-cloud-link').innerHTML)
 }
 
-const optArticleSelector = '.post',
-  optTitleSelector = '.post-title',
-  optTitleListSelector = '.titles',
-  optArticleTagsSelector = '.post-tags .list',
-  optArticleAuthorSelector = '.post-author',
-  optTagsListSelector = '.tags.list',
-  optAuthorsListSelector = '.authors.list',
-  optCloudClassCount = 5,
-  optCloudClassCountPrefix = 'tag-size-'
-
 function titleClickHandler(event){
   event.preventDefault();
   const clickedElement = this;
@@ -68,7 +58,7 @@ function generateTitleLinks(customSelector = ''){
   titleList.innerHTML = '';
   
   /* for each article */
-  
+
   const articles = document.querySelectorAll(optArticleSelector + customSelector);
   let html = '';
   for(let article of articles){
@@ -106,4 +96,15 @@ function generateTitleLinks(customSelector = ''){
     console.log(link);
   }
 }
+
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles',
+  optArticleTagsSelector = '.post-tags .list',
+  optArticleAuthorSelector = '.post-author',
+  optTagsListSelector = '.tags.list',
+  optAuthorsListSelector = '.authors.list',
+  optCloudClassCount = 5,
+  optCloudClassCountPrefix = 'tag-size-'
+  
 generateTitleLinks();
