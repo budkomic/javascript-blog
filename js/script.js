@@ -1,13 +1,5 @@
 'use strict';
 
-const templates = {
-  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
-  articleTagsLink: Handlebars.compile(document.querySelector('#template-article-tags-link').innerHTML),
-  authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML),
-  tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML),
-  authorCloudLink: Handlebars.compile(document.querySelector('#template-author-cloud-link').innerHTML)
-}
-
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
@@ -96,6 +88,7 @@ function generateTitleLinks(customSelector = ''){
     console.log(html);
 
   }
+  
   titleList.innerHTML = html;
   
   const links = document.querySelectorAll('.titles a');
