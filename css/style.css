@@ -1,9 +1,9 @@
-/* Error: Expected identifier.
- *   ,
- * 1 | @@ -1,24 +1,14 @@
- *   |  ^
- *   '
- *   sass\style.scss 1:2  root stylesheet */
+/* Error: expected "}".
+ *     ,
+ * 169 | } 
+ *     |   ^
+ *     '
+ *   sass\style.scss 169:3  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Expected identifier.\a   \2577 \a 1 \2502  @@ -1,24 +1,14 @@\d\a   \2502   ^\a   \2575 \a   sass\\style.scss 1:2  root stylesheet";
+  content: 'Error: expected "}".\a     \2577 \a 169 \2502  } \a     \2502    ^\a     \2575 \a   sass\\style.scss 169:3  root stylesheet';
 }
